@@ -741,6 +741,6 @@ h3:where(:not(.delivery-list h3)),.result-list h2,.biography-sections h2{
 
 
 .presidency-insignia{width:min(100%,280px);display:grid;justify-items:center;gap:10px}
-.heritage-shield{position:absolute;z-index:-1;inset-inline-end:0;top:52%;transform:translate(51%,-50%) rotate(-8deg);width:clamp(200px,29vw,440px);height:auto;opacity:.11;pointer-events:none}
+.heritage-shield{position:absolute;z-index:-1;inset-inline-end:0;top:52%;transform:translate(51%,-50%) rotate(-8deg);width:clamp(176px,25vw,382px);height:auto;opacity:.085;pointer-events:none}
 .heritage-card-arrow{margin-top:23px;color:var(--color-muted);transition:transform var(--transition-fast),color var(--transition-fast)}
 .heritage-card:hover .heritage-card-arrow,.heritage-card:focus-visible .heritage-card-arrow{color:var(--color-ink);transform:translate(2px,-2px)}
