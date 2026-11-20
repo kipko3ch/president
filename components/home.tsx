@@ -59,8 +59,9 @@ export function NewsStrip({locale}:{locale:Locale}){
  </div></section>
 }
 export function CardRow({locale}:{locale:Locale}){
- return <section className="section shell presidency-stories">
+ return <section className="section presidency-stories">
   <img src="/media/kenya-shield.webp" alt="" width={120} height={193} className="heritage-shield"/>
+  <div className="shell">
   <div className="section-heading">
    <div>
     <h2>{t(locale,['Presidency & Heritage','Urais na Urithi'])}</h2>
@@ -82,6 +83,7 @@ export function CardRow({locale}:{locale:Locale}){
     </div>
     <ArrowUpRight className="heritage-card-arrow" size={22} aria-hidden="true"/>
    </Link>
+  </div>
   </div>
  </section>
 }
