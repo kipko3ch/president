@@ -1,0 +1,15 @@
+@theme inline {
+  --color-navy: #0b1230;
+  --color-deep: #070b20;
+  --color-pale: #e8eff8;
+  --color-paper: #fafbfd;
+  --color-ink: #0f1633;
+  --color-muted: #5b647a;
+  --color-line: #d9dfea;
+  --color-gold: #b8975a;
+  --font-serif: var(--display), Georgia, serif;
+  --font-supporting: var(--supporting), Arial, sans-serif;
+  --font-sans: var(--inter), Arial, sans-serif;
+}
+
+
