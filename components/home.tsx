@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import {HeroVideo} from './hero-video';
-import {ArrowRight} from 'lucide-react';
+import {ArrowRight,ArrowUpRight} from 'lucide-react';
 import {articles,categories,categoryCards,config,delivery,formatDate,gallery,href,photos,presidentialQuote,profiles,t,type Locale,type Copy} from '../lib/content';
 import {MessageForm,SpotlightNewsCarousel} from './client';
 import {Picture} from './photo';
@@ -16,7 +16,7 @@ export function Hero({locale}:{locale:Locale}){
   <div className="hero-video-stage"><HeroVideo/></div>
   <div className="shell hero-inner">
    <div className="hero-copy">
-    <h1 id="hero-title">{t(locale,['The State House Kenya','Ikulu ya Kenya'])}</h1>
+    <h1 id="hero-title">{t(locale,['State House','Ikulu ya'])}<span className="hero-country">Kenya</span></h1>
    </div>
   </div>
  </section>
@@ -37,10 +37,13 @@ function PresidencyIntro({locale}:{locale:Locale}){
    <Picture photo={photos.president} locale={locale} sizes="(max-width: 680px) 82vw, 380px" className="presidency-portrait"/>
    <figcaption className="presidential-caption">
     <span>{t(locale,['5th President of Kenya','Rais wa Tano wa Kenya'])}</span>
-    <img src="/media/ruto-flag.jpg" alt="" className="tiny-presidential-flag" width={26} height={17}/>
+    <img src="/media/ruto-flag.jpg" alt={t(locale,['Presidential standard','Bendera ya urais'])} className="presidential-flag" width={52} height={34}/>
    </figcaption>
   </figure>
-  <PresidentialSignature/>
+  <div className="presidency-insignia">
+   <img src="/media/kenya-shield.webp" alt="" width={30} height={48} className="presidency-shield"/>
+   <PresidentialSignature/>
+  </div>
   </div>
  </section>
 }
@@ -69,6 +72,7 @@ export function CardRow({locale}:{locale:Locale}){
      <h3>{t(locale,['Former Presidents','Marais wa Zamani'])}</h3>
      <p>{t(locale,['Discover the leadership and history of those who shaped the Republic of Kenya.','Gundua uongozi na historia ya wale waliojenga Jamhuri ya Kenya.'])}</p>
     </div>
+    <ArrowUpRight className="heritage-card-arrow" size={22} aria-hidden="true"/>
    </Link>
 
    <Link className="heritage-card" href={href(locale,'presidency/national-symbols')}>
@@ -76,6 +80,7 @@ export function CardRow({locale}:{locale:Locale}){
      <h3>{t(locale,['The Symbols of National Unity','Alama za Umoja wa Kitaifa'])}</h3>
      <p>{t(locale,['Explore Kenya’s national flag, coat of arms, public seal and anthem.','Gundua bendera, nembo, muhuri wa umma na wimbo wa taifa wa Kenya.'])}</p>
     </div>
+    <ArrowUpRight className="heritage-card-arrow" size={22} aria-hidden="true"/>
    </Link>
   </div>
  </section>
@@ -100,7 +105,7 @@ export function HistoryBand({locale}:{locale:Locale}){
  </div></section>
 }
 export function Home({locale}:{locale:Locale}){
- return <><Hero locale={locale}/><PresidencyIntro locale={locale}/><NewsStrip locale={locale}/><CardRow locale={locale}/><ResidenceMap locale={locale}/><DeliveryOverview locale={locale}/><HistoryBand locale={locale}/>
+ return <><div className="hero-overlay-sequence"><Hero locale={locale}/><PresidencyIntro locale={locale}/></div><NewsStrip locale={locale}/><CardRow locale={locale}/><ResidenceMap locale={locale}/><DeliveryOverview locale={locale}/><HistoryBand locale={locale}/>
  <section id="write" className="write"><div className="shell write-grid section"><div><p className="eyebrow">{t(locale,['Correspondence','Mawasiliano'])}</p><h2>{t(locale,['Write to the President','Mwandikie Rais'])}</h2><p>{t(locale,['Preview a message using this demonstration form.','Hakiki ujumbe kwa kutumia fomu hii ya majaribio.'])}</p></div><MessageForm locale={locale}/></div></section></>
 }
 const footerGroups:{title:Copy; links:{to:string;label:Copy}[]}[]=[
@@ -124,20 +129,3 @@ export function Footer({locale}:{locale:Locale}){
   </div>
  </div><div className="flag-stripe" aria-hidden="true"/></footer>
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -38,16 +38,6 @@ export function ScrollMotion() {
           });
         }
 
-        const hero = main.querySelector<HTMLElement>('.hero');
-        if (hero) {
-          gsap.to(hero.querySelectorAll('.hero-backdrop, .hero-video-stage'), {
-            yPercent: desktop ? 15 : 7,
-            scale: desktop ? 1.11 : 1.04,
-            ease: 'none',
-            scrollTrigger: {trigger: hero, start: 'top top', end: 'bottom top', scrub: 1.15},
-          });
-        }
-
         for (const image of main.querySelectorAll<HTMLElement>(
           '.presidency-portrait, .history-grid > .picture, .gallery-preview figure:first-child .picture, .gallery-preview figure:last-child .picture, .history-photographs img',
         )) {
