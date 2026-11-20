@@ -37,11 +37,10 @@ function PresidencyIntro({locale}:{locale:Locale}){
    <Picture photo={photos.president} locale={locale} sizes="(max-width: 680px) 82vw, 380px" className="presidency-portrait"/>
    <figcaption className="presidential-caption">
     <span>{t(locale,['5th President of Kenya','Rais wa Tano wa Kenya'])}</span>
-    <img src="/media/ruto-flag.jpg" alt={t(locale,['Presidential standard','Bendera ya urais'])} className="presidential-flag" width={52} height={34}/>
    </figcaption>
   </figure>
   <div className="presidency-insignia">
-   <img src="/media/kenya-shield.webp" alt="" width={30} height={48} className="presidency-shield"/>
+   <img src="/media/ruto-flag.jpg" alt={t(locale,['Presidential standard','Bendera ya urais'])} className="presidential-flag" width={52} height={34}/>
    <PresidentialSignature/>
   </div>
   </div>
@@ -61,6 +60,7 @@ export function NewsStrip({locale}:{locale:Locale}){
 }
 export function CardRow({locale}:{locale:Locale}){
  return <section className="section shell presidency-stories">
+  <img src="/media/kenya-shield.webp" alt="" width={120} height={193} className="heritage-shield"/>
   <div className="section-heading">
    <div>
     <h2>{t(locale,['Presidency & Heritage','Urais na Urithi'])}</h2>

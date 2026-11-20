@@ -733,7 +733,7 @@ h3:where(:not(.delivery-list h3)),.result-list h2,.biography-sections h2{
 
 .presidency-portrait-figure{width:min(100%,360px);text-align:center}
 .presidency-portrait-figure .presidency-portrait{width:100%}
-.presidency-stories{padding-bottom:clamp(24px,3vw,42px)}
+.presidency-stories{position:relative;isolation:isolate;padding-bottom:clamp(24px,3vw,42px)}
 .residences{padding-top:clamp(32px,4.5vw,64px)}
 @media(max-width:680px){.presidency-portrait-figure{width:min(82%,320px)}}
 
@@ -741,6 +741,6 @@ h3:where(:not(.delivery-list h3)),.result-list h2,.biography-sections h2{
 
 
 .presidency-insignia{width:min(100%,280px);display:grid;justify-items:center;gap:10px}
-.presidency-shield{display:block;width:30px;height:48px;object-fit:contain;opacity:.29}
+.heritage-shield{position:absolute;z-index:-1;inset-inline-end:clamp(4px,4vw,55px);top:50%;transform:translateY(-50%);width:clamp(76px,12vw,154px);height:auto;opacity:.14;pointer-events:none}
 .heritage-card-arrow{margin-top:23px;color:var(--color-muted);transition:transform var(--transition-fast),color var(--transition-fast)}
 .heritage-card:hover .heritage-card-arrow,.heritage-card:focus-visible .heritage-card-arrow{color:var(--color-ink);transform:translate(2px,-2px)}
